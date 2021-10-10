@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+<h2>th ast</h2>
+<div th:object="${member}">
+    <p>
+        <span>userA ${}</span><br>
+        <span th:text="${member.getNumber()}"></span>
+        <span th:text="${member.getName()}"></span>
+        <span th:text="${member.getContents()}"></span>
+    </p>
+    <p>
+        <span>userA *{}</span><br>
+        <span th:text="*{number}"></span>
+        <span th:text="*{name}"></span>
+        <span th:text="*{contents}"></span>
+    </p>
+</div>
+</body>
+</html>

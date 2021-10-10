@@ -8,10 +8,7 @@ import practice.thymeleafstudy.domain.Member;
 import practice.thymeleafstudy.repository.MemoryRepository;
 
 import javax.annotation.PostConstruct;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 @Slf4j
 @Controller
@@ -45,6 +42,13 @@ public class HelloController {
         score.put("userC", 50);
         model.addAttribute("score", score);
         return "view/th-map";
+    }
+
+    @GetMapping("/th-ast")
+    public String thAst(Model model) {
+        Member member = new Member(1, "kim", "contents_etc_11");
+        model.addAttribute("member", member);
+        return "view/th-ast";
     }
 
     @PostConstruct
