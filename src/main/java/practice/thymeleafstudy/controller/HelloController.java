@@ -51,6 +51,13 @@ public class HelloController {
         return "view/th-ast";
     }
 
+    @GetMapping("/th-ahref")
+    public String thAHref(Model model) {
+        String mem = "members";
+        model.addAttribute("mem", mem);
+        return "view/th-ahref";
+    }
+
     @PostConstruct
     public void init() {
         Member member = new Member(1, "kim", "contents_etc_11");
