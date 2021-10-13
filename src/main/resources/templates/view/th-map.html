@@ -4,14 +4,17 @@
     <meta charset="utf-8">
 </head>
 <body>
-<h2>th text</h2>
+<h2>th map</h2>
 <div>
-<p>
-    <span th:text="${text}"></span>
-</p>
-<p>
-    <span th:utext="${text}"></span>
-</p>
+    <p>
+        <span>userA</span>
+        <span th:text="${score['userA']}"></span>
+    </p>
+    <hr>
+    <p th:each="entry : ${score}">
+        <span th:text="${entry.key}"></span>
+        <span th:text="${entry.value}"></span>
+    </p>
 </div>
 </body>
 </html>
